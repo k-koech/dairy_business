@@ -85,7 +85,16 @@
 
         document.getElementById("produce").innerHTML += "The total production is " + total + " litres per day";
       
-        
+         //calling incomeOverTime function and calculate income
+        var daily = incomeOverTime(selling_price, 1);
+        var weekly = incomeOverTime(selling_price, 7);
+        var yearly = incomeOverTime(selling_price, 365);
+
+        document.getElementById("produce").innerHTML += "<div> .</div>";
+        document.getElementById("produce").innerHTML += "<div>Your Daily income will be Ksh " + (daily*total) + "</div>";
+        document.getElementById("produce").innerHTML += "<div>Your weekly income will be Ksh " + (weekly*total) + "</div>";
+        document.getElementById("produce").innerHTML += "<div>Your yearly income will be Ksh " + (yearly*total) + "</div>";
+
         }
 
     }
