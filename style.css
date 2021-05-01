@@ -48,3 +48,32 @@ body
     font-size: 18px;
     border-radius: 0.5em;
 }
+.container .row .col1 .title1, .col2 .title1
+{
+    font-size: 2em;
+    display: block;
+    color: rgb(255, 28, 3);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+.container .row .col2
+{
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid rgb(255, 210, 210);
+    background-color: rgb(255, 255, 255);
+    width:50%;
+}
+.container .row .col2 div
+{
+margin: 5px;
+}
+.container .row .col2 .subtitle
+{
+    font-size: x-large;
+    color: rgb(255, 28, 3);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
