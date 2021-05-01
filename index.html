@@ -84,7 +84,10 @@
         document.getElementById("produce").innerHTML += "<div>Your production in Shed D "+ data.shedD +" litres per day </div>";
 
         document.getElementById("produce").innerHTML += "The total production is " + total + " litres per day";
-      
+         
+         //reset a form after submit
+        resetForm();
+
          //calling incomeOverTime function and calculate income
         var daily = incomeOverTime(selling_price, 1);
         var weekly = incomeOverTime(selling_price, 7);
