@@ -75,7 +75,15 @@
 
       
         
+        var total = data.shedA+data.shedB + data.shedC +data.shedD;
 
+        document.getElementById("produce").innerHTML += "<div class='subtitle'>Production</div>";
+        document.getElementById("produce").innerHTML += "<div>Your production in Shed A "+ data.shedA +" litres per day </div>";
+        document.getElementById("produce").innerHTML += "<div>Your production in Shed B "+ data.shedB +" litres per day </div>";
+        document.getElementById("produce").innerHTML += "<div>Your production in Shed C "+ data.shedC +" litres per day </div>";
+        document.getElementById("produce").innerHTML += "<div>Your production in Shed D "+ data.shedD +" litres per day </div>";
+
+        document.getElementById("produce").innerHTML += "The total production is " + total + " litres per day";
       
         }
 
