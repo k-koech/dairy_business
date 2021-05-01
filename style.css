@@ -30,3 +30,21 @@ body
     display: flex;
     margin: auto;
 }
+
+.container .row .col1
+{
+    border-radius: 0.5em;
+    margin: 0.5em;
+    padding: 2em;
+    background-color: rgb(194, 194, 194);
+    width:40%;
+}
+
+.container .row .col1 #error
+{
+    background-color: red;
+    color: white;
+    padding: 1em;
+    font-size: 18px;
+    border-radius: 0.5em;
+}
