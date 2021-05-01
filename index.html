@@ -50,6 +50,40 @@
 <div> <!-- closing the row -->
 </div>
 
+<script>
+    var selling_price=45;
+    var total;
+    
+    function totalProduction()
+    {
+        var shedA = parseInt(document.getElementById('shedA').value);  
+        
+        if(shedA===''){
+            alert("Name must be filled out");
+    return false;
+         //   document.getElementById("error").innerHTML ="All fields are required!!";
+        }
+        else
+        {
+
+        
+        var data = {}
+        data["shedA"] = shedA;
+        data["shedB"] = parseInt(document.getElementById('shedB').value);
+        data["shedC"] = parseInt(document.getElementById('shedC').value);
+        data["shedD"] = parseInt(document.getElementById('shedD').value);
+
+      
+        
+
+      
+        }
+
+    }
+
+      
+ </script>
+
 
 
 
