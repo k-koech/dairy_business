@@ -99,6 +99,28 @@
         document.getElementById("produce").innerHTML += "<div>Your yearly income will be Ksh " + (yearly*total) + "</div>";
 
 
+           //  calculating leap year income
+        var leapyear = [
+        { month : "January",income : (31 * total * selling_price)},
+        { month : "February",income : (29 * total * selling_price) },
+        { month : "March",income : (31 * total * selling_price) },
+        { month : "April",income : (30 * total * selling_price) },
+        { month : "May",income : (31 * total * selling_price) },
+        { month : "June",income : (30 * total * selling_price) },
+        { month : "July",income : (31 * total * selling_price) },
+        { month : "August",income : (31 * total * selling_price) },
+        { month : "September",income : (30 * total * selling_price) },
+        { month : "October",income : (31 * total * selling_price) },
+        { month : "November",income : (30 * total * selling_price) },
+        { month : "December",income : (31 * total * selling_price) }
+        ];
+        
+        document.getElementById("result").innerHTML += "<div  class='subtitle'>Income per Month</div>";
+        for(var x=0;x<12;x++)
+         {
+             document.getElementById("result").innerHTML += "<div>Your income for "+ leapyear[x].month + " is " + leapyear[x].income + "</div>";
+         }
+
 
         }
 
