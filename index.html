@@ -95,6 +95,8 @@
         document.getElementById("produce").innerHTML += "<div>Your weekly income will be Ksh " + (weekly*total) + "</div>";
         document.getElementById("produce").innerHTML += "<div>Your yearly income will be Ksh " + (yearly*total) + "</div>";
 
+
+
         }
 
     }
@@ -102,6 +104,14 @@
     function incomeOverTime(selling_price, time)
     {
         return (selling_price*time)
+    }
+
+    function resetForm()
+    {
+        document.getElementById('shedA').value = " ";
+        document.getElementById('shedB').value = " ";
+        document.getElementById('shedC').value = " ";
+        document.getElementById('shedD').value = " ";
     }
 
       
