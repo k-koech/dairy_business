@@ -77,3 +77,33 @@ margin: 5px;
     color: rgb(255, 28, 3);
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+.container .row .formGroup
+{
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .row .formGroup input[type=text]
+{
+    border: none;
+    padding: 0.7em;
+    border-radius: 0.2em;
+}
+.container .row button
+{
+    color: white;
+    background-color: rgb(255, 28, 3);
+    border: none;
+    font-size: 1.3em;
+    border-radius: 5px;
+    padding: 0.5em;
+    float: right;
+    width: 30%;
+}
+.container .row button:hover
+{
+    cursor: pointer;
+    background-color: #e82222;
+}
