@@ -23,3 +23,10 @@ body
     background-color: rgb(255, 28, 3);
     color: white;
 }
+
+.container .row
+{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
