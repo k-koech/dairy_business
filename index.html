@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>Dairy Business</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+<div class="container">  
+<h2><span>D</span>airy Business</h2>
+<div class="row">
+<div class="col1">
+   <span class="title1">Daily produce</span>
+   <div id='error'></div>
+   <form id="formData" onsubmit="totalProduction(); event.preventDefault(); "> 
+            <div class="formGroup">
+                <label>Enter shed A production</label>
+                <input type="text" id='shedA' class="form-control" >
+            </div>
+            
+            <div class="formGroup">
+                <label>Enter shed B production </label>
+                <input type="text" id='shedB' class="form-control" >
+            </div>
+
+            <div class="formGroup">
+                <label>Enter shed C production </label>
+                <input type="text" id='shedC' class="form-control" >
+            </div>
+
+            <div class="formGroup">
+                <label>Enter shed D production </label>
+                <input type="text" id='shedD' class="form-control" >
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+<div class="col2">
+<span class="title1">Produce and Earnings</span>
+ <div id="produce"></div>
+ 
+ <div id="result">     
+ </div>
+</div>
+<div> <!-- closing the row -->
+</div>
+
+
+
+
+ 
+  </body>
+</html>
+
