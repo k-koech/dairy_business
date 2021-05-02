@@ -229,8 +229,10 @@ margin: 5px;
     width:40%;
     }
 
-  
-
+    .header .header-content 
+    {
+        width:100%;
+    }
     .header .header-content h1
     {
         font-size: 2em;
@@ -273,7 +275,7 @@ margin: 5px;
     }
     .footer .row .col
     {
-        
+        margin-top: 1em;
         clear: both;
         width:100%;
         
@@ -300,4 +302,41 @@ margin: 5px;
         font-size: 17px;
     }
 
+}
+@media screen and (max-width: 450px) 
+{
+    
+    /* header */
+    .title
+    {
+        top: 1.5em;
+        left: -20%;
+    }
+    .title img
+    {
+    width:40%;
+    }
+   
+    
+}
+
+@media screen and (max-width: 430px) 
+{
+    .footer .subscribe
+    { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer .subscribe .input
+    {
+       
+        width:100%;
+    }
+    .footer button
+    {
+        margin-top: 1em;
+        font-size: 17px;
+        width:100%;
+    }
 }
