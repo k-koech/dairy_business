@@ -7,26 +7,34 @@
 
     <!-- Bootstrap CSS -->
     <title>Dairy Business</title>
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
   </head>
   <body>
 
-<div class="container">  
+<div id="container">  
 
 <section class="header">
-<h2 class="title"><span>D</span>airy Business</h2
+<h2 class="title">
+    <img src="images/logo.png" alt='logo'>
+</h2>
 
-<div class="form">
-hhjhglkg
+
+<div class="header-content">
+<h1>DAIRY BUSINESS</h1>
+<button>Enter your Daily Produce<i class="fa fa-arrow-down" aria-hidden="true"></i></button>
 </div>
 
 
 </section>
 
 <section class="results">
-<div class="row">
+<div class="row1">
 <div class="col1">
-   <span class="title1">Daily produce</span>
+   <span class="title1">Daily produce (Litres)</span>
    <div id='error'></div>
    <form id="formData" onsubmit="totalProduction(); event.preventDefault(); "> 
             <div class="formGroup">
@@ -58,6 +66,20 @@ hhjhglkg
  <div id="produce"></div>
  
  <div id="result">     
+ </div>
+
+ <div>
+ <table class="table table-dark">
+ <caption id="caption"></caption>
+  <thead>
+    <tr id="comparison-headers">
+      
+    </tr>
+  </thead>
+  <tbody id="comparison">
+    
+  </tbody>
+</table>
  </div>
 </div>
 <div> <!-- closing the row -->
@@ -142,7 +164,7 @@ hhjhglkg
         { month : "December",income : (31 * total * selling_price) }
         ];
         
-        document.getElementById("result").innerHTML += "<div  class='subtitle'>Income per Month</div>";
+
         for(var x=0;x<12;x++)
          {
              document.getElementById("result").innerHTML += "<div>Your income for "+ leapyear[x].month + " is " + leapyear[x].income + "</div>";
@@ -167,7 +189,7 @@ hhjhglkg
          updated_price = 49.60;
          var normalYear = [
         { month : "January",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
-        { month : "February",income : Math.round(29 * total * updated_price).toFixed(2), difference : Math.round((28 * total * updated_price)-(28 * total * selling_price)).toFixed(2)  },
+        { month : "February",income : Math.round(29 * total * updated_price).toFixed(2), difference : Math.round((29 * total * updated_price)-(28 * total * selling_price)).toFixed(2)  },
         { month : "March",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
         { month : "April",income : Math.round(30 * total * updated_price).toFixed(2), difference : Math.round((30 * total * updated_price)-(30 * total * selling_price)).toFixed(2) },
         { month : "May",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
@@ -180,10 +202,12 @@ hhjhglkg
         { month : "December",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) }
         ];
         
-        document.getElementById("result").innerHTML += "<div  class='subtitle'>Income per Month after increase of price</div>";
+        document.getElementById("caption").innerHTML += "Earnings after increase and difference";
+        document.getElementById("comparison-headers").innerHTML += "<tr><td>Month</td><td>Earnings(Ksh) @49/-</td><td>difference from 45/-(Ksh)</td></tr>";
+        
         for(var x=0;x<12;x++)
          {
-             document.getElementById("result").innerHTML += "<div>Your income for "+ normalYear[x].month + " is " + normalYear[x].income + " difference " + normalYear[x].difference +  "</div>";
+             document.getElementById("comparison").innerHTML += "<tr><td>"+ normalYear[x].month + "</td><td>" + normalYear[x].income + "</td><td>" + normalYear[x].difference +  "</td></tr>";
          }
     }
 
