@@ -10,7 +10,7 @@ body
 }
 .header
 {
-    height: 90vh;
+    height: 100vh;
     background-image: url('images/background.jpg');
     position: relative;
     background-position: center;
@@ -34,11 +34,18 @@ body
     background-color: rgb(255, 28, 3);
     color: white;
 }
+.header .form
+{
+    background-color: crimson;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+}
 /* *******Results section***** */
 .results
 {
-    background-color: blueviolet;
     /* margin:0px auto 0px;  */
     /* width: 90%; */
 }
@@ -110,6 +117,10 @@ margin: 5px;
     padding: 0.7em;
     border-radius: 0.2em;
 }
+.results .row .formGroup input[type=text]:focus
+{
+    border:none;
+}
 .results .row button
 {
     color: white;
@@ -123,6 +134,21 @@ margin: 5px;
 }
 .results .row button:hover
 {
+    
     cursor: pointer;
     background-color: #e82222;
+}
+.results .row button:focus
+{
+    border: none;
+}
+
+/* *****footer****** */
+.footer
+{
+    height:20em;
+    background-color: rgb(107, 107, 107);
+    color: #fff;
+    text-align: center;
+    padding:2em;
 }

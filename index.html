@@ -14,7 +14,13 @@
 <div class="container">  
 
 <section class="header">
-<h2 class="title"><span>D</span>airy Business</h2>
+<h2 class="title"><span>D</span>airy Business</h2
+
+<div class="form">
+hhjhglkg
+</div>
+
+
 </section>
 
 <section class="results">
@@ -47,6 +53,7 @@
         </form>
 </div>
 <div class="col2">
+
 <span class="title1">Produce and Earnings</span>
  <div id="produce"></div>
  
@@ -56,7 +63,15 @@
 <div> <!-- closing the row -->
 </section>
 
-
+<section class="footer">
+<div class="row">
+<div class="col"></div>
+<div class="col">
+    
+</div>
+</div>
+<p>Created by Kelvin Kipchumba Koech @2021 </p>
+</section>
 
 
 </div>
@@ -123,28 +138,8 @@
              document.getElementById("result").innerHTML += "<div>Your income for "+ leapyear[x].month + " is " + leapyear[x].income + "</div>";
          }
 
-          // comparison
-         selling_price = 49.60;
-         var leapyear = [
-        { month : "January",income : Math.round(31 * total * selling_price).toFixed(2)},
-        { month : "February",income : Math.round(29 * total * selling_price).toFixed(2) },
-        { month : "March",income : Math.round(31 * total * selling_price).toFixed(2) },
-        { month : "April",income : Math.round(30 * total * selling_price).toFixed(2) },
-        { month : "May",income : Math.round(31 * total * selling_price).toFixed(2) },
-        { month : "June",income : Math.round(30 * total * selling_price).toFixed(2) },
-        { month : "July",income : Math.round(31 * total * selling_price).toFixed(2) },
-        { month : "August",income : Math.round(31 * total * selling_price).toFixed(2) },
-        { month : "September",income : Math.round(30 * total * selling_price).toFixed(2) },
-        { month : "October",income : Math.round(31 * total * selling_price).toFixed(2) },
-        { month : "November",income : Math.round(30 * total * selling_price).toFixed(2) },
-        { month : "December",income : Math.round(31 * total * selling_price).toFixed(2) }
-        ];
-        
-        document.getElementById("result").innerHTML += "<div  class='subtitle'>Income per Month after increase of price</div>";
-        for(var x=0;x<12;x++)
-         {
-             document.getElementById("result").innerHTML += "<div>Your income for "+ leapyear[x].month + " is " + leapyear[x].income + "</div>";
-         }
+          // calling comparison function
+        comparison(total)
 
 
        // }
@@ -156,14 +151,30 @@
         return (selling_price*time)
     }
 
-    function leapYearIncome()
-    {
-        return (selling_price*time)
-    }
 
-    function comparison()
+    function comparison(total)
     {
-        return (selling_price*time)
+         updated_price = 49.60;
+         var normalYear = [
+        { month : "January",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
+        { month : "February",income : Math.round(29 * total * updated_price).toFixed(2), difference : Math.round((28 * total * updated_price)-(28 * total * selling_price)).toFixed(2)  },
+        { month : "March",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
+        { month : "April",income : Math.round(30 * total * updated_price).toFixed(2), difference : Math.round((30 * total * updated_price)-(30 * total * selling_price)).toFixed(2) },
+        { month : "May",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
+        { month : "June",income : Math.round(30 * total * updated_price).toFixed(2), difference : Math.round((30 * total * updated_price)-(30 * total * selling_price)).toFixed(2) },
+        { month : "July",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
+        { month : "August",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
+        { month : "September",income : Math.round(30 * total * updated_price).toFixed(2), difference : Math.round((30 * total * updated_price)-(30 * total * selling_price)).toFixed(2) },
+        { month : "October",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) },
+        { month : "November",income : Math.round(30 * total * updated_price).toFixed(2), difference : Math.round((30 * total * updated_price)-(30 * total * selling_price)).toFixed(2) },
+        { month : "December",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) }
+        ];
+        
+        document.getElementById("result").innerHTML += "<div  class='subtitle'>Income per Month after increase of price</div>";
+        for(var x=0;x<12;x++)
+         {
+             document.getElementById("result").innerHTML += "<div>Your income for "+ normalYear[x].month + " is " + normalYear[x].income + " difference " + normalYear[x].difference +  "</div>";
+         }
     }
 
     function resetForm()
