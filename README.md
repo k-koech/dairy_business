@@ -2,7 +2,7 @@
 #### Th dairy business production website, 01/05/2021
 #### By **Kelvin Kipchumba Koech**
 ## Description
-{This is a detailed description of your application, including its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }
+The application is about dairy farming and selling the produce. The  application allows for user input, then calculates the produce per day. It the calculates the income per week, month and year. It also calculates income per month in a leap year.
 ## Setup/Installation Requirements
 * Download the zip file under the code section.
 * Extract it in your desired folder.
