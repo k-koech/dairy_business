@@ -10,8 +10,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+
 <div class="container">  
-<h2><span>D</span>airy Business</h2>
+
+<section class="header">
+<h2 class="title"><span>D</span>airy Business</h2>
+</section>
+
+<section class="results">
 <div class="row">
 <div class="col1">
    <span class="title1">Daily produce</span>
@@ -48,6 +54,11 @@
  </div>
 </div>
 <div> <!-- closing the row -->
+</section>
+
+
+
+
 </div>
 
 <script>
@@ -58,17 +69,8 @@
     {
         var shedA = parseInt(document.getElementById('shedA').value);  
         
-        if(shedA===''){
-            alert("Name must be filled out");
-        return false;
-         //   document.getElementById("error").innerHTML ="All fields are required!!";
-        }
-        else
-        {
-
-        
         var data = {}
-        data["shedA"] = shedA;
+        data["shedA"] = parseInt(document.getElementById('shedA').value);
         data["shedB"] = parseInt(document.getElementById('shedB').value);
         data["shedC"] = parseInt(document.getElementById('shedC').value);
         data["shedD"] = parseInt(document.getElementById('shedD').value);
@@ -145,7 +147,7 @@
          }
 
 
-        }
+       // }
 
     }
 
@@ -155,6 +157,11 @@
     }
 
     function leapYearIncome()
+    {
+        return (selling_price*time)
+    }
+
+    function comparison()
     {
         return (selling_price*time)
     }
