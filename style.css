@@ -109,6 +109,15 @@ body
     width:50%;
     border:1px solid #fff;
 }
+/* .results .row1 .col2 #caption-div
+{
+    background-color: rgb(66, 65, 65);
+    padding: 1em;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #fff;
+} */
+
 .results .row1 .col2 div
 {
 margin: 5px;
@@ -121,7 +130,6 @@ margin: 5px;
 }
 .results .row .formGroup
 {
-    background-color:violet;
     font-size: 1.3em;
     margin-bottom: 1em;
     display: flex;
@@ -141,7 +149,7 @@ margin: 5px;
 .results .row1 button
 {
     color: white;
-    background-color: rgb(255, 28, 3);
+    background-color: rgb(43, 42, 42);
     border: none;
     font-size: 1.3em;
     border-radius: 5px;

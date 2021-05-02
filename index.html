@@ -61,28 +61,40 @@
         </form>
 </div>
 <div class="col2">
+    <span class="title1">Produce and Income</span>
+    <div id="produce">
+        <table class="table table-dark">
+            <div id="produce-div"></div>
+            <thead>
+                <tr id="produce-header"> </tr>
+            </thead>
+            <tbody id="produce-body"> 
+            </tbody>
+        </table>
+    </div>
+    <div id="result">
+          <table class="table table-dark">
+            <div id="leapYear-div"></div>
+            <thead>
+                <tr id="leapYear-headers"> </tr>
+            </thead>
+            <tbody id="leapYear"> 
+            </tbody>
+        </table>
+    </div>
 
-<span class="title1">Produce and Earnings</span>
- <div id="produce"></div>
- 
- <div id="result">     
- </div>
-
- <div>
- <table class="table table-dark">
- <caption id="caption"></caption>
-  <thead>
-    <tr id="comparison-headers">
-      
-    </tr>
-  </thead>
-  <tbody id="comparison">
-    
-  </tbody>
-</table>
- </div>
+    <div>
+        <table class="table table-dark">
+            <div id="caption-div"></div>
+            <thead>
+                <tr id="comparison-headers"> </tr>
+            </thead>
+            <tbody id="comparison"> 
+            </tbody>
+        </table>
+    </div>
 </div>
-<div> <!-- closing the row -->
+</div> <!-- closing the row -->
 </section>
 
 <section class="footer">
@@ -102,7 +114,6 @@
     <p>Created by Kelvin Kipchumba Koech &copy; 2021 </p>
 </div>
 </div>
-
 </section>
 
 
@@ -126,13 +137,13 @@
         
         var total = data.shedA+data.shedB + data.shedC +data.shedD;
 
-        document.getElementById("produce").innerHTML += "<div class='subtitle'>Production</div>";
-        document.getElementById("produce").innerHTML += "<div>Your production in Shed A "+ data.shedA +" litres per day </div>";
-        document.getElementById("produce").innerHTML += "<div>Your production in Shed B "+ data.shedB +" litres per day </div>";
-        document.getElementById("produce").innerHTML += "<div>Your production in Shed C "+ data.shedC +" litres per day </div>";
-        document.getElementById("produce").innerHTML += "<div>Your production in Shed D "+ data.shedD +" litres per day </div>";
+        document.getElementById("produce-header").innerHTML += '<div class="alert text-white bg-dark h4">Production</div>';
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your production in Shed A</td><td>"+ data.shedA +" litres per day </td></tr>";
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your production in Shed B</td><td>"+ data.shedB +" litres per day </td></tr>";
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your production in Shed C</td><td>"+ data.shedC +" litres per day </td></tr>";
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your production in Shed D</td><td>"+ data.shedD +" litres per day </td></tr>";
 
-        document.getElementById("produce").innerHTML += "The total production is " + total + " litres per day";
+        document.getElementById("produce-body").innerHTML += "<tr><td>The total production is</td><td>" + total + " litres per day</td></tr>";
          
          //reset a form after submit
         resetForm();
@@ -142,10 +153,10 @@
         var weekly = incomeOverTime(selling_price, 7);
         var yearly = incomeOverTime(selling_price, 365);
 
-        document.getElementById("produce").innerHTML += "<div> .</div>";
-        document.getElementById("produce").innerHTML += "<div>Your Daily income will be Ksh " + (daily*total) + "</div>";
-        document.getElementById("produce").innerHTML += "<div>Your weekly income will be Ksh " + (weekly*total) + "</div>";
-        document.getElementById("produce").innerHTML += "<div>Your yearly income will be Ksh " + (yearly*total) + "</div>";
+        document.getElementById("produce-body").innerHTML += "<tr><td></td><td></td></tr>";
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your Daily income will be</td><td>Ksh " + (daily*total) + "</td></tr>";
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your Monthly income will be</td><td>Ksh " + (weekly*total) + "</td></tr>";
+        document.getElementById("produce-body").innerHTML += "<tr><td>Your Yearly income will be</td><td>Ksh " + (yearly*total) + "</td></tr>";
 
 
            //  calculating leap year income
@@ -164,17 +175,14 @@
         { month : "December",income : (31 * total * selling_price) }
         ];
         
-
+        document.getElementById("leapYear-div").innerHTML += '<div class="alert text-white bg-dark h4">Leap Year Income Per Month </div>';
         for(var x=0;x<12;x++)
          {
-             document.getElementById("result").innerHTML += "<div>Your income for "+ leapyear[x].month + " is " + leapyear[x].income + "</div>";
+             document.getElementById("leapYear").innerHTML += "<tr><td>Your income for "+ leapyear[x].month + " is </td><td>Ksh. " + leapyear[x].income + "</td></tr></div>";
          }
 
           // calling comparison function
         comparison(total)
-
-
-       // }
 
     }
 
@@ -202,7 +210,7 @@
         { month : "December",income : Math.round(31 * total * updated_price).toFixed(2), difference : Math.round((31 * total * updated_price)-(31 * total * selling_price)).toFixed(2) }
         ];
         
-        document.getElementById("caption").innerHTML += "Earnings after increase and difference";
+        document.getElementById("caption-div").innerHTML += '<div class="alert text-white bg-dark h4">Earnings after price increase and difference</div> ';
         document.getElementById("comparison-headers").innerHTML += "<tr><td>Month</td><td>Earnings(Ksh) @49/-</td><td>difference from 45/-(Ksh)</td></tr>";
         
         for(var x=0;x<12;x++)
